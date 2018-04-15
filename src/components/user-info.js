@@ -7,8 +7,8 @@ const UserInfo = ({ userinfo }) => (
             <h1 className='username'><a href={`https://github.com/${userinfo.login}`}>{userinfo.username}</a></h1>
             <ul className='repos-info'>
                 <li>- Repositórios: {userinfo.repos}</li>
-                <li>- Seguidores: {userinfo.seguidores}</li>
-                <li>- Segundo: {userinfo.seguindo}</li>
+                <li>- Seguidores: {userinfo.followers}</li>
+                <li>- Seguindo: {userinfo.following}</li>
             </ul>
         </div>
 )

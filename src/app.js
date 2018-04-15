@@ -10,8 +10,8 @@ class App extends Component{
                 photo: 'https://avatars2.githubusercontent.com/u/26071112?v=4',
                 login: 'antoniotex',
                 repos: 100,
-                seguidores: 10,
-                seguindo: 12
+                followers: 10,
+                following: 12
             },
             repos: [{
                 name: 'Reposits',

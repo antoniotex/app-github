@@ -26,7 +26,7 @@ const AppContent = ({userinfo, repos, starred}) => (
 )
 
 AppContent.propTypes = {
-    userinfo: PropTypes.object.esRequired,
+    userinfo: PropTypes.object.isRequired,
     repos: PropTypes.array.isRequired,
     starred: PropTypes.array.isRequired
 }
