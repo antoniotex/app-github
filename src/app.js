@@ -6,17 +6,19 @@ class App extends Component{
         super()
         this.state = {
             userinfo: {
-                username: 'Pinguelo',
-                repo: 100,
+                username: 'Antonio Carlos',
+                photo: 'https://avatars2.githubusercontent.com/u/26071112?v=4',
+                login: 'antoniotex',
+                repos: 100,
                 seguidores: 10,
                 seguindo: 12
             },
             repos: [{
-                name: 'Repop',
+                name: 'Reposits',
                 link: '#'
             }],
             starred: [{
-                name: 'Repo',
+                name: 'Starred',
                 link: '#'
             }]
         }
