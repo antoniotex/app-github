@@ -27,7 +27,9 @@ class App extends Component{
                         repos: result.public_repos,
                         followers: result.followers,
                         following: result.following
-                    }
+                    },
+                    repos: [],
+                    starred: []
                 })
             })
         }
@@ -36,7 +38,7 @@ class App extends Component{
     getRepos(type){
         return(e) => {
             console.log('Type', type)
-            ajax().get(`https://api.github.com/users/antoniotex/${type}`).then((result) => {
+            ajax().get(`https://api.github.com/users/${this.state.userinfo.login}/${type}`).then((result) => {
                 this.setState({
                     [type]:result.map((repo) => {
                         return {
