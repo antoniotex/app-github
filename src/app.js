@@ -32,6 +32,22 @@ class App extends Component{
             })
         }
     }
+    
+    getRepos(type){
+        return(e) => {
+            console.log('Type', type)
+            ajax().get(`https://api.github.com/users/antoniotex/${type}`).then((result) => {
+                this.setState({
+                    [type]:result.map((repo) => {
+                        return {
+                            name: repo.name,
+                            link: repo.html_url
+                        }
+                    })
+                })
+            })
+        }
+    }
 
     render(){
         return (
@@ -40,8 +56,8 @@ class App extends Component{
             repos={this.state.repos} 
             starred={this.state.starred} 
             handleSearch={(e) => this.handleSearch(e)}
-            getRepos={() => console.log('repos')}
-            getStarred={() => console.log('star')}
+            getRepos={this.getRepos('repos')}
+            getStarred={this.getRepos('starred')}
             />
         )
     }
